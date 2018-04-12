@@ -9,7 +9,7 @@
 <body>
       <form action="./pojo2" method="post">
     oaddress:<input type="text" name="oaddress"/><br>
-     uname:<input type="text" name="user.unmae"/>  
+     uname:<input type="text" name="user.uname"/>  
     <input type="submit" value="submit">
     </form>
 </body>
