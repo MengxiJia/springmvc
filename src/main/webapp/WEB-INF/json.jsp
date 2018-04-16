@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script type="text/javascript">
-function jasondemo(){
+function jsondemo(){
 	var json_string={uname:"sspu",upassword:"abc"};
 	$.ajax({
 		type:"POST",
@@ -29,9 +29,7 @@ function jasondemo(){
 <title>Insert title here</title>
 </head>
 <body>
-<form action="./ajaxdemo" method="post">
-    <input type="submit" value="submit">
-    </form>
+<button  onclick="jsondemo()">点我!</button>
 
 </body>
 </html>
