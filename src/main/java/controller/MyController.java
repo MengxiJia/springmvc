@@ -35,8 +35,21 @@ public class MyController {
      public @ResponseBody User ajaxdemo(@RequestBody User u) {   	 
 		System.out.println("id"+u.getUname()+"ppp");
 		System.out.println("id"+u.getUpassword()+"aaa");
-    	 return u;
-    	 
+    	 return u;  	 
+     }
+     //光这样是不够的，jsp需要controller进行转
+     
+     @RequestMapping("/json")
+     //里面的first指的是浏览器搜索的名字
+     public String getJson() {
+    	 return "json";
+     //firstpage是实际搜索的jsp
+     }
+     
+     @RequestMapping(value="/ajaxdemo2",produces= {"application/text;charset=utf-8"})
+     public @ResponseBody String ajaxdemo2(String myname) {   	 
+		System.out.println(myname);	
+    	 return "valid user耶啊";  	 
      }
      
 

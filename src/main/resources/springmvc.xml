@@ -18,6 +18,7 @@
         <mvc:resources location="/" mapping="/*.html"/>
         <mvc:default-servlet-handler/>
         <!-- 静态资源正常显示 -->
+        <!-- 因为引入jquery -->
            
         <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
               <property name="prefix" value="/WEB-INF/"/>
