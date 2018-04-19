@@ -16,6 +16,7 @@ public class UserDaoImpl {
 	
 	public boolean Registered(User user) {
 		int i = 0;
+		//这是为了之后检验是否成功
 		boolean success = false;
 		String sql = "insert into user (u_id,u_username,u_name,u_password,u_phone,u_email,u_city,u_gender,u_image,u_registeredtime,u_birthday) values(?,?,?,?,?,?,?,?,?,?,?)";
 		Date time_temp = new Date();

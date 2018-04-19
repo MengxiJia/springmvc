@@ -47,6 +47,7 @@ public class MyController {
      }
      
      @RequestMapping(value="/ajaxdemo2",produces= {"application/text;charset=utf-8"})
+     //produces= {"application/text;charset=utf-8"} 这个是解决alert中文乱码
      public @ResponseBody String ajaxdemo2(String myname) {   	 
 		System.out.println(myname);	
     	 return "valid user耶啊";  	 

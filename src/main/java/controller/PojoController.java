@@ -1,7 +1,9 @@
 package controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class PojoController {
@@ -11,13 +13,11 @@ public class PojoController {
   	   System.out.println("odate:"+order.getOdate());
   	   return "";
   	   //order是实际指向的jsp
-     }
-	 
+     } 
 	 @RequestMapping(value="/order1")
      public String getPojo1() {
   	   return "order1";
      }
-	 
 	 
 	 
      @RequestMapping(value="/pojo2")
@@ -33,5 +33,7 @@ public class PojoController {
   	   return "order2";
      }
     
+     
+
      
 }

@@ -25,7 +25,8 @@ public class UserController {
 		} else {
 			request.setAttribute("rems", "注册失败");
 		}
-		return "web/registered";		
+		return "web/registered";
+		//因为在springmvc中 写的是web-inf，我们这里有新建一个web文件夹，所以这里要加上web/
 	}
 	
 }
