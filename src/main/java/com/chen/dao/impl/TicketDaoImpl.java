@@ -1,27 +1,20 @@
-package controller;
+package com.chen.dao.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import controller.Ticket;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
-import com.chen.dao.impl.TicketDaoImpl;
+import controller.Ticket;
+
 @Controller
-public class TicketController {
-	
-    @RequestMapping(value="/showlist")
-    public String getShowlist() {
- 	   return "showlist";
-    }
-	
-	@RequestMapping(value="po")
-	public @ResponseBody ArrayList<Ticket> TicketAjax(){
-		ArrayList<Ticket> alist = new ArrayList<Ticket>();
+public class TicketDaoImpl {
+
+	public List<Ticket> getTicket() {
+
+		List<Ticket> alist = new ArrayList<Ticket>();
 		Ticket t1 = new Ticket();
 		t1.setTid(121);
 		t1.setDeparture_add("SHN");
@@ -31,7 +24,7 @@ public class TicketController {
 		t1.setPrice(67.8);
 		t1.setUname_code("C93832");
 		alist.add(t1);
-		
+
 		Ticket t2 = new Ticket();
 		t2.setTid(122);
 		t2.setDeparture_add("HND");
@@ -41,7 +34,7 @@ public class TicketController {
 		t2.setPrice(127);
 		t2.setUname_code("D85414");
 		alist.add(t2);
-		
+
 		Ticket t3 = new Ticket();
 		t3.setTid(123);
 		t3.setDeparture_add("JFK");
@@ -51,21 +44,8 @@ public class TicketController {
 		t3.setPrice(458);
 		t3.setUname_code("A58451");
 		alist.add(t3);
-		
-		
-		
+
 		return alist;
-	}
 
-	@RequestMapping(value="TicketShow")
-	public ModelAndView TicketShow(){
-		TicketDaoImpl dao = new TicketDaoImpl();
-		List alist = dao.getTicket();
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/ticketShow");
-		mv.addObject("tickets",alist);
-		return mv;
-		
 	}
-
 }
